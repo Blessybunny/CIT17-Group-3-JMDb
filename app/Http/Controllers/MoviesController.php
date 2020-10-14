@@ -37,7 +37,7 @@ class MoviesController extends Controller {
         //Filter unchecked genres
         $genresUnchecked = array_diff($this->genreList(), $genresChecked);
         //Return view
-        return view('movies.edit', compact('movie', 'genres', 'genresChecked', 'genresUnchecked'));
+        return view('movies.edit', compact('movie', 'genresChecked', 'genresUnchecked'));
     }
     
     //CREATE
@@ -140,6 +140,6 @@ class MoviesController extends Controller {
         //Filter unchecked genres
         $genresUnchecked = array_diff($this->genreList(), $genresChecked);
         //Return view
-        return view('movies.view', compact('movie', 'genres', 'genresChecked', 'genresUnchecked'));
+        return view('movies.view', compact('movie', 'genresChecked', 'genresUnchecked'));
     }
 }
